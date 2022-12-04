@@ -1,0 +1,64 @@
+.row{
+margin-left: 20px;
+margin-top: 20px;
+}
+.col{
+margin: 10px;
+padding: 10px;
+}
+
+input{
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 7px;
+}
+div{
+  flex-direction: column;
+  margin-top: 20px;
+}
+#S{
+  background-color:green;
+  border: none;
+  color: white;
+  box-shadow: 1px 1px 1px 1px ;
+  padding: 10px;
+  margin-left: 60px;
+  border-radius: 10px;
+}
+
+table{
+  border:none;
+  border-radius: 5px;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+th{
+  padding: 10px;
+  border: 1px solid black;
+}
+td{
+  padding: 10px;
+  border:1px solid black ;
+}
+
+#D{
+  padding:7px;
+  border: none;
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  margin: 5px;
+}
+#E{
+  padding:7px;
+  border: none;
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+  margin: 5px;
+}
