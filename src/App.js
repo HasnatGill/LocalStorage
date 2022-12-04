@@ -28,7 +28,7 @@ function App() {
   const [state, setState] = useState(initialState)
   const [updateIndex, setupdateIndex] = useState()
 
-  
+
   const handleChange = e => {
     setState(s => ({ ...s, [e.target.name]: e.target.value }))
 
@@ -148,6 +148,7 @@ function App() {
           })
         }
       </table>
+      <div></div>
     </div>
   );
 }
