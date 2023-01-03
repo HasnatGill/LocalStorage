@@ -38,7 +38,25 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault()
     let id = Math.random().toString().slice(8)
+
     const { firstName, lastName, email, password } = state;
+
+    if (!firstName) {
+      return alert("Enter your First Name")
+    }
+
+    if (!lastName) {
+      return alert("Enter your last Name")
+    }
+
+    if (!email) {
+      return alert("Enter your Email")
+    }
+
+    if (!password) {
+      return alert("Enter your Password")
+    }
+
     const obj = {
       id,
       firstName,
@@ -71,8 +89,6 @@ function App() {
       email: item.email,
       password: item.password
     })
-
-
   }
 
   const handleUpdate = () => {
@@ -87,7 +103,20 @@ function App() {
     console.log(items[updateIndex] = item);
     setstudData(items)
     setFlag(false)
+    setState({
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+    })
   }
+
+  const Delete = (i) => {
+    const remove = [...studData];
+    remove.splice(i, 1);
+    setstudData(remove)
+  }
+
 
   return (
     <div>
@@ -119,13 +148,6 @@ function App() {
           }
         </div>
       </div>
-      <form >
-
-
-
-      </form>
-
-
       <table>
         <tr>
           <th>First Name</th>
@@ -142,13 +164,14 @@ function App() {
                 <td>{item.lastName}</td>
                 <td>{item.email}</td>
                 <td>{item.password}</td>
-                <td><button id='D' className='me-2'>Delete</button><button onClick={() => handleEidt(item, i)} id='E'>Edit</button></td>
+                <td><button id='D' className='me-2' onClick={() => Delete(i)} >Delete</button>
+                  <button onClick={() => handleEidt(item, i)} id='E'>Edit</button></td>
               </tr>
             )
           })
         }
       </table>
-      
+
     </div>
   );
 }
